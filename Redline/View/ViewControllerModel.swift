@@ -11,6 +11,20 @@ import Foundation
 class ViewControllerModel {
     var contentModels = [ContentModel]()
     
+    /// Function that returns the model for the cell at indexPath
+    /// - Parameters:
+    ///     - indexPath : the index path related to cell
+    /// - Returns: ContentModel object at index path
+    func contentModel(at indexPath: IndexPath) -> ContentModel {
+        return contentModels[indexPath.row]
+    }
+    
+    /// Function that returns number of rows
+    /// - Returns: Total count of json models
+    func numberOfRows() -> Int {
+        return contentModels.count
+    }
+
     /// Function that retrieves the json file and parse it
     func getJsonData() {
         if let url = Bundle.main.url(forResource: "CONTENTLISTINGPAGE-PAGE1", withExtension: "json") {

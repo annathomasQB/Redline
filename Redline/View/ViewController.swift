@@ -34,11 +34,12 @@ class ViewController: UIViewController {
 // MARK: - UICollectionView Data Source
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 40
+        return viewModel.numberOfRows()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: RedlineCollectionViewCell.self), for: indexPath) as? RedlineCollectionViewCell {
+            cell.contentModel = viewModel.contentModel(at: indexPath)
             return cell
         }
         return UICollectionViewCell()
@@ -55,3 +56,9 @@ extension ViewController: UICollectionViewDelegateFlowLayout{
     }
 }
 
+// MARK: - UICollectionView Delegate
+extension ViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+//        if indexPath.row ==
+    }
+}
