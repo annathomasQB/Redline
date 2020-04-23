@@ -37,3 +37,12 @@ extension ViewController: UICollectionViewDataSource {
     
     
 }
+
+// MARK: - UICollectionView Delegate Flow Layout
+extension ViewController: UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = view.frame.width
+        return CGSize(width: 0.3 * width, height: 200)
+    }
+}
+

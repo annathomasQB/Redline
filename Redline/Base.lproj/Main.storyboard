@@ -27,7 +27,7 @@
                                 <rect key="frame" x="0.0" y="76" width="414" height="820"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mWQ-YL-xU7">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="mWQ-YL-xU7">
                                     <size key="itemSize" width="114" height="174"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -35,26 +35,38 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RedlineCollectionViewCell" id="lxY-DI-nsL" customClass="RedlineCollectionViewCell" customModule="Redline" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="160" height="240"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="280"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="T8m-Cy-CRd">
-                                            <rect key="frame" x="0.0" y="0.0" width="160" height="240"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="280"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="WEz-tI-yvq">
                                                     <rect key="frame" x="0.0" y="0.0" width="160" height="240"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDK-YP-SJO">
+                                                    <rect key="frame" x="0.0" y="240" width="160" height="40"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="WEz-tI-yvq" secondAttribute="bottom" id="eMr-YL-9Qu"/>
+                                                <constraint firstItem="bDK-YP-SJO" firstAttribute="leading" secondItem="T8m-Cy-CRd" secondAttribute="leading" id="Hni-1h-gNI"/>
+                                                <constraint firstAttribute="bottom" secondItem="WEz-tI-yvq" secondAttribute="bottom" constant="40" id="eMr-YL-9Qu"/>
                                                 <constraint firstAttribute="trailing" secondItem="WEz-tI-yvq" secondAttribute="trailing" id="fzZ-AE-4cv"/>
                                                 <constraint firstItem="WEz-tI-yvq" firstAttribute="leading" secondItem="T8m-Cy-CRd" secondAttribute="leading" id="g1v-iT-G31"/>
+                                                <constraint firstItem="bDK-YP-SJO" firstAttribute="top" secondItem="WEz-tI-yvq" secondAttribute="bottom" id="huh-Bu-6dI"/>
+                                                <constraint firstAttribute="trailing" secondItem="bDK-YP-SJO" secondAttribute="trailing" id="lRE-Fe-8tv"/>
+                                                <constraint firstAttribute="bottom" secondItem="bDK-YP-SJO" secondAttribute="bottom" id="vRW-SS-6Si"/>
                                                 <constraint firstItem="WEz-tI-yvq" firstAttribute="top" secondItem="T8m-Cy-CRd" secondAttribute="top" id="w1N-CZ-Szb"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="160" height="240"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="customSize" width="160" height="280"/>
                                         <connections>
                                             <outlet property="contentImage" destination="WEz-tI-yvq" id="dYv-dk-fk8"/>
+                                            <outlet property="contentTitle" destination="bDK-YP-SJO" id="5NZ-7O-5AY"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

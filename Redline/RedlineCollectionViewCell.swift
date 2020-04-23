@@ -10,5 +10,6 @@ import UIKit
 
 class RedlineCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var contentImage: UIImageView!
+    @IBOutlet weak var contentTitle: UILabel!
     
 }
