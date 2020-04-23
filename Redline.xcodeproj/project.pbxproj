@@ -26,6 +26,9 @@
 		0B68977324519E4600427B6C /* poster1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0B68976A24519E4600427B6C /* poster1.jpg */; };
 		0B68977424519E4600427B6C /* poster2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0B68976B24519E4600427B6C /* poster2.jpg */; };
 		0B68977524519E4600427B6C /* poster7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0B68976C24519E4600427B6C /* poster7.jpg */; };
+		0B68977A2451A22900427B6C /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6897792451A22900427B6C /* ContentModel.swift */; };
+		0B68977C2451A45100427B6C /* ViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B68977B2451A45100427B6C /* ViewControllerModel.swift */; };
+		0B68977F2451AE5D00427B6C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B68977E2451AE5D00427B6C /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		0B68976A24519E4600427B6C /* poster1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = poster1.jpg; sourceTree = "<group>"; };
 		0B68976B24519E4600427B6C /* poster2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = poster2.jpg; sourceTree = "<group>"; };
 		0B68976C24519E4600427B6C /* poster7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = poster7.jpg; sourceTree = "<group>"; };
+		0B6897792451A22900427B6C /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
+		0B68977B2451A45100427B6C /* ViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerModel.swift; sourceTree = "<group>"; };
+		0B68977E2451AE5D00427B6C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,12 +88,13 @@
 		0B68974424515A8100427B6C /* Redline */ = {
 			isa = PBXGroup;
 			children = (
+				0B68977D2451AE4000427B6C /* Utility */,
+				0B68977724519F5800427B6C /* View */,
+				0B68977624519F4800427B6C /* Model */,
 				0B68976224519E0800427B6C /* Resources */,
 				0B68975B24519CE800427B6C /* API */,
 				0B68974524515A8100427B6C /* AppDelegate.swift */,
 				0B68974724515A8100427B6C /* SceneDelegate.swift */,
-				0B68974924515A8100427B6C /* ViewController.swift */,
-				0B689759245183B200427B6C /* RedlineCollectionViewCell.swift */,
 				0B68974B24515A8100427B6C /* Main.storyboard */,
 				0B68975024515A8700427B6C /* LaunchScreen.storyboard */,
 				0B68975324515A8700427B6C /* Info.plist */,
@@ -128,6 +135,40 @@
 				0B68976824519E4600427B6C /* poster9.jpg */,
 			);
 			path = Posters;
+			sourceTree = "<group>";
+		};
+		0B68977624519F4800427B6C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0B6897792451A22900427B6C /* ContentModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0B68977724519F5800427B6C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0B68974924515A8100427B6C /* ViewController.swift */,
+				0B68977B2451A45100427B6C /* ViewControllerModel.swift */,
+				0B68977824519F7F00427B6C /* CollectionViewCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0B68977824519F7F00427B6C /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0B689759245183B200427B6C /* RedlineCollectionViewCell.swift */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		0B68977D2451AE4000427B6C /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				0B68977E2451AE5D00427B6C /* Constants.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +256,9 @@
 			files = (
 				0B68975A245183B200427B6C /* RedlineCollectionViewCell.swift in Sources */,
 				0B68974A24515A8100427B6C /* ViewController.swift in Sources */,
+				0B68977C2451A45100427B6C /* ViewControllerModel.swift in Sources */,
+				0B68977A2451A22900427B6C /* ContentModel.swift in Sources */,
+				0B68977F2451AE5D00427B6C /* Constants.swift in Sources */,
 				0B68974624515A8100427B6C /* AppDelegate.swift in Sources */,
 				0B68974824515A8100427B6C /* SceneDelegate.swift in Sources */,
 			);

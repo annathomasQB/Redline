@@ -10,15 +10,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //Variables
+    var viewModel = ViewControllerModel()
+    
+    
     // IB Outlets
     @IBOutlet weak var redLineCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        // get json data
+        getData()
     }
 
+    /// Function that gets the json data for display
+    func getData() {
+        viewModel.getJsonData()
+    }
 
 }
 
