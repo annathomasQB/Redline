@@ -13,6 +13,7 @@
 		0B68974D24515A8100427B6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B68974B24515A8100427B6C /* Main.storyboard */; };
 		0B68974F24515A8700427B6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B68974E24515A8700427B6C /* Assets.xcassets */; };
 		0B68975224515A8700427B6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B68975024515A8700427B6C /* LaunchScreen.storyboard */; };
+		0B68975A245183B200427B6C /* RedlineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B689759245183B200427B6C /* RedlineCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		0B68974E24515A8700427B6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B68975124515A8700427B6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B68975324515A8700427B6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B689759245183B200427B6C /* RedlineCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedlineCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				0B68974524515A8100427B6C /* AppDelegate.swift */,
 				0B68974724515A8100427B6C /* SceneDelegate.swift */,
 				0B68974924515A8100427B6C /* ViewController.swift */,
+				0B689759245183B200427B6C /* RedlineCollectionViewCell.swift */,
 				0B68974B24515A8100427B6C /* Main.storyboard */,
 				0B68974E24515A8700427B6C /* Assets.xcassets */,
 				0B68975024515A8700427B6C /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B68975A245183B200427B6C /* RedlineCollectionViewCell.swift in Sources */,
 				0B68974A24515A8100427B6C /* ViewController.swift in Sources */,
 				0B68974624515A8100427B6C /* AppDelegate.swift in Sources */,
 				0B68974824515A8100427B6C /* SceneDelegate.swift in Sources */,
