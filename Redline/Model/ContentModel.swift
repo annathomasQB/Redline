@@ -10,8 +10,8 @@ import Foundation
 
 struct ContentModel: Codable {
     var id: Int?
-    var title: String
-    var image: String
+    var title: String?
+    var image: String?
     
     enum CodingKeys: String, CodingKey {
         case id

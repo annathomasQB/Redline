@@ -21,4 +21,10 @@ struct Constants {
     static let apiFileName = ["CONTENTLISTINGPAGE-PAGE1","CONTENTLISTINGPAGE-PAGE2","CONTENTLISTINGPAGE-PAGE3"]
     
     static let jsonExtension = "json"
+    
+    static let emptyString = ""
+    static let emptyPage = -1
+    
+    static let navBarImage = "navigationBarBackground"
+    static let placeholderImage = "Placeholder"
 }

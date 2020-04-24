@@ -10,7 +10,8 @@ import Foundation
 
 class ViewControllerModel {
     var contentModels = [ContentModel]()
-    var pageNumber = -1
+    var pageNumber = Constants.emptyPage
+    var pageTitle = Constants.emptyString
     
     /// Function that returns the model for the cell at indexPath
     /// - Parameters:
@@ -36,6 +37,11 @@ class ViewControllerModel {
         }
     }
     
+    /// Function that returns the page title
+    func getPageTitle() -> String {
+        return self.pageTitle
+    }
+    
     /// Function that retrieves the json file and parse it
     /// - Parameters:
     ///     - completion: Completion handler
@@ -49,6 +55,8 @@ class ViewControllerModel {
                     let json = try JSONSerialization.jsonObject(with: data) as! [String: Any]
                     // get json key value for key "page"
                     let page = json[Constants.jsonKeyPage] as! [String: Any]
+                    // get page title from json value for key "title"
+                    pageTitle = page[Constants.jsonKeyTitle] as! String
                     // get json key value for key "content-items"
                     let contentItems = page[Constants.jsonKeyContentItems] as! [String:Any]
                     // get json key value for key "content"

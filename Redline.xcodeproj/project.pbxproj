@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0B68974624515A8100427B6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B68974524515A8100427B6C /* AppDelegate.swift */; };
 		0B68974824515A8100427B6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B68974724515A8100427B6C /* SceneDelegate.swift */; };
-		0B68974A24515A8100427B6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B68974924515A8100427B6C /* ViewController.swift */; };
+		0B68974A24515A8100427B6C /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B68974924515A8100427B6C /* CollectionViewController.swift */; };
 		0B68974D24515A8100427B6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B68974B24515A8100427B6C /* Main.storyboard */; };
 		0B68974F24515A8700427B6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B68974E24515A8700427B6C /* Assets.xcassets */; };
 		0B68975224515A8700427B6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B68975024515A8700427B6C /* LaunchScreen.storyboard */; };
@@ -29,13 +29,14 @@
 		0B68977A2451A22900427B6C /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6897792451A22900427B6C /* ContentModel.swift */; };
 		0B68977C2451A45100427B6C /* ViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B68977B2451A45100427B6C /* ViewControllerModel.swift */; };
 		0B68977F2451AE5D00427B6C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B68977E2451AE5D00427B6C /* Constants.swift */; };
+		0B8378E72452E9C400031F8C /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8378E62452E9C400031F8C /* UIColor+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0B68974224515A8100427B6C /* Redline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Redline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B68974524515A8100427B6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B68974724515A8100427B6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0B68974924515A8100427B6C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0B68974924515A8100427B6C /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		0B68974C24515A8100427B6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B68974E24515A8700427B6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B68975124515A8700427B6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +57,10 @@
 		0B6897792451A22900427B6C /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 		0B68977B2451A45100427B6C /* ViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerModel.swift; sourceTree = "<group>"; };
 		0B68977E2451AE5D00427B6C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0B8378E62452E9C400031F8C /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		0B87B40F2452F23C00840A55 /* TitilliumWeb-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Regular.ttf"; sourceTree = "<group>"; };
+		0B87B4102452F23C00840A55 /* TitilliumWeb-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Light.ttf"; sourceTree = "<group>"; };
+		0B87B4132452F3A100840A55 /* TitilliumWeb-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-ExtraLight.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,15 +93,14 @@
 		0B68974424515A8100427B6C /* Redline */ = {
 			isa = PBXGroup;
 			children = (
-				0B68977D2451AE4000427B6C /* Utility */,
-				0B68977724519F5800427B6C /* View */,
-				0B68977624519F4800427B6C /* Model */,
-				0B68976224519E0800427B6C /* Resources */,
 				0B68975B24519CE800427B6C /* API */,
+				0B68976224519E0800427B6C /* Resources */,
+				0B68977624519F4800427B6C /* Model */,
+				0B68977724519F5800427B6C /* View */,
+				0B68977D2451AE4000427B6C /* Utility */,
+				0B8378E42452B40800031F8C /* Storyboards */,
 				0B68974524515A8100427B6C /* AppDelegate.swift */,
 				0B68974724515A8100427B6C /* SceneDelegate.swift */,
-				0B68974B24515A8100427B6C /* Main.storyboard */,
-				0B68975024515A8700427B6C /* LaunchScreen.storyboard */,
 				0B68975324515A8700427B6C /* Info.plist */,
 			);
 			path = Redline;
@@ -115,6 +119,7 @@
 		0B68976224519E0800427B6C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0B87B40E2452F1D900840A55 /* Fonts */,
 				0B68976324519E1700427B6C /* Posters */,
 				0B68974E24515A8700427B6C /* Assets.xcassets */,
 			);
@@ -148,7 +153,7 @@
 		0B68977724519F5800427B6C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0B68974924515A8100427B6C /* ViewController.swift */,
+				0B68974924515A8100427B6C /* CollectionViewController.swift */,
 				0B68977B2451A45100427B6C /* ViewControllerModel.swift */,
 				0B68977824519F7F00427B6C /* CollectionViewCell */,
 			);
@@ -166,9 +171,37 @@
 		0B68977D2451AE4000427B6C /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				0B8378E52452E9B200031F8C /* Extensions */,
 				0B68977E2451AE5D00427B6C /* Constants.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		0B8378E42452B40800031F8C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0B68974B24515A8100427B6C /* Main.storyboard */,
+				0B68975024515A8700427B6C /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		0B8378E52452E9B200031F8C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0B8378E62452E9C400031F8C /* UIColor+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0B87B40E2452F1D900840A55 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0B87B4132452F3A100840A55 /* TitilliumWeb-ExtraLight.ttf */,
+				0B87B4102452F23C00840A55 /* TitilliumWeb-Light.ttf */,
+				0B87B40F2452F23C00840A55 /* TitilliumWeb-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,8 +288,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B68975A245183B200427B6C /* RedlineCollectionViewCell.swift in Sources */,
-				0B68974A24515A8100427B6C /* ViewController.swift in Sources */,
+				0B68974A24515A8100427B6C /* CollectionViewController.swift in Sources */,
 				0B68977C2451A45100427B6C /* ViewControllerModel.swift in Sources */,
+				0B8378E72452E9C400031F8C /* UIColor+Extensions.swift in Sources */,
 				0B68977A2451A22900427B6C /* ContentModel.swift in Sources */,
 				0B68977F2451AE5D00427B6C /* Constants.swift in Sources */,
 				0B68974624515A8100427B6C /* AppDelegate.swift in Sources */,
@@ -414,7 +448,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.qburst.Redline;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -432,7 +466,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.qburst.Redline;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

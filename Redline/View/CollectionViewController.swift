@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CollectionViewController: UICollectionViewController {
 
     //Variables
     var viewModel = ViewControllerModel()
@@ -20,6 +20,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // customize Navigation Bar appearance
+        customizeNavigationBar()
+        
         // get json data
         getData()
     }
@@ -28,9 +32,17 @@ class ViewController: UIViewController {
     func getData() {
         viewModel.getNextSet {
             self.refreshContent()
+            // set navigation page title
+            self.navigationController?.navigationBar.topItem?.title = self.viewModel.getPageTitle()
         }
+        
     }
     
+    /// Function to customize the appearance of the navigation bar
+    func customizeNavigationBar() {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: Constants.navBarImage), for: .default)
+    }
+
     /// Function to refresh collectionview data
     func refreshContent() {
         DispatchQueue.main.async {
@@ -40,24 +52,22 @@ class ViewController: UIViewController {
 }
 
 // MARK: - UICollectionView Data Source
-extension ViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+extension CollectionViewController {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.numberOfRows()
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: RedlineCollectionViewCell.self), for: indexPath) as? RedlineCollectionViewCell {
             cell.contentModel = viewModel.contentModel(at: indexPath)
             return cell
         }
         return UICollectionViewCell()
     }
-    
-    
 }
 
 // MARK: - UICollectionView Delegate Flow Layout
-extension ViewController: UICollectionViewDelegateFlowLayout{
+extension CollectionViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = view.frame.width
         return CGSize(width: 0.3 * width, height: 200)
@@ -65,8 +75,8 @@ extension ViewController: UICollectionViewDelegateFlowLayout{
 }
 
 // MARK: - UICollectionView Delegate
-extension ViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+extension CollectionViewController {
+    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         // check if about to reach second last row of current list
         if indexPath.row == viewModel.numberOfRows()-6 {
             self.getData()
