@@ -17,7 +17,7 @@ class RedlineCollectionViewCell: UICollectionViewCell {
         didSet {
             guard let contentModel = contentModel else {return}
             self.contentTitle.text = contentModel.title
-//            self.contentImage.image = UIImage(named: contentModel.image)
+            self.contentImage.image = UIImage(named: contentModel.image)
         }
     }
 }

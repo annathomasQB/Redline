@@ -18,5 +18,7 @@ struct Constants {
     static let jsonKeyPageSize = "page-size"
     static let jsonKeyPageNumber = "page-num"
     
-    static let apiFileName = "CONTENTLISTINGPAGE-PAGE"
+    static let apiFileName = ["CONTENTLISTINGPAGE-PAGE1","CONTENTLISTINGPAGE-PAGE2","CONTENTLISTINGPAGE-PAGE3"]
+    
+    static let jsonExtension = "json"
 }

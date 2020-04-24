@@ -26,9 +26,17 @@ class ViewController: UIViewController {
 
     /// Function that gets the json data for display
     func getData() {
-        viewModel.getJsonData()
+        viewModel.getNextSet {
+            self.refreshContent()
+        }
     }
-
+    
+    /// Function to refresh collectionview data
+    func refreshContent() {
+        DispatchQueue.main.async {
+            self.redLineCollectionView.reloadData()
+        }
+    }
 }
 
 // MARK: - UICollectionView Data Source
@@ -59,6 +67,9 @@ extension ViewController: UICollectionViewDelegateFlowLayout{
 // MARK: - UICollectionView Delegate
 extension ViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-//        if indexPath.row ==
+        // check if about to reach second last row of current list
+        if indexPath.row == viewModel.numberOfRows()-6 {
+            self.getData()
+        }
     }
 }
