@@ -29,7 +29,9 @@
 		0B68977A2451A22900427B6C /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6897792451A22900427B6C /* ContentModel.swift */; };
 		0B68977C2451A45100427B6C /* ViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B68977B2451A45100427B6C /* ViewControllerModel.swift */; };
 		0B68977F2451AE5D00427B6C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B68977E2451AE5D00427B6C /* Constants.swift */; };
-		0B8378E72452E9C400031F8C /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8378E62452E9C400031F8C /* UIColor+Extensions.swift */; };
+		0B97CEEC2452FE34001D898F /* TitilliumWeb-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0B87B4132452F3A100840A55 /* TitilliumWeb-ExtraLight.ttf */; };
+		0B97CEED2452FE36001D898F /* TitilliumWeb-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0B87B4102452F23C00840A55 /* TitilliumWeb-Light.ttf */; };
+		0B97CEEE2452FE39001D898F /* TitilliumWeb-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0B87B40F2452F23C00840A55 /* TitilliumWeb-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,7 +59,6 @@
 		0B6897792451A22900427B6C /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 		0B68977B2451A45100427B6C /* ViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerModel.swift; sourceTree = "<group>"; };
 		0B68977E2451AE5D00427B6C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		0B8378E62452E9C400031F8C /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		0B87B40F2452F23C00840A55 /* TitilliumWeb-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Regular.ttf"; sourceTree = "<group>"; };
 		0B87B4102452F23C00840A55 /* TitilliumWeb-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Light.ttf"; sourceTree = "<group>"; };
 		0B87B4132452F3A100840A55 /* TitilliumWeb-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-ExtraLight.ttf"; sourceTree = "<group>"; };
@@ -171,7 +172,6 @@
 		0B68977D2451AE4000427B6C /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				0B8378E52452E9B200031F8C /* Extensions */,
 				0B68977E2451AE5D00427B6C /* Constants.swift */,
 			);
 			path = Utility;
@@ -184,14 +184,6 @@
 				0B68975024515A8700427B6C /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		0B8378E52452E9B200031F8C /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				0B8378E62452E9C400031F8C /* UIColor+Extensions.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		0B87B40E2452F1D900840A55 /* Fonts */ = {
@@ -262,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B97CEEE2452FE39001D898F /* TitilliumWeb-Regular.ttf in Resources */,
 				0B68976D24519E4600427B6C /* poster4.jpg in Resources */,
 				0B68977424519E4600427B6C /* poster2.jpg in Resources */,
 				0B68977024519E4600427B6C /* poster6.jpg in Resources */,
@@ -273,6 +266,8 @@
 				0B68977124519E4600427B6C /* poster9.jpg in Resources */,
 				0B68976024519D1100427B6C /* CONTENTLISTINGPAGE-PAGE3.json in Resources */,
 				0B68976E24519E4600427B6C /* poster5.jpg in Resources */,
+				0B97CEEC2452FE34001D898F /* TitilliumWeb-ExtraLight.ttf in Resources */,
+				0B97CEED2452FE36001D898F /* TitilliumWeb-Light.ttf in Resources */,
 				0B68976F24519E4600427B6C /* poster8.jpg in Resources */,
 				0B68974F24515A8700427B6C /* Assets.xcassets in Resources */,
 				0B68974D24515A8100427B6C /* Main.storyboard in Resources */,
@@ -290,7 +285,6 @@
 				0B68975A245183B200427B6C /* RedlineCollectionViewCell.swift in Sources */,
 				0B68974A24515A8100427B6C /* CollectionViewController.swift in Sources */,
 				0B68977C2451A45100427B6C /* ViewControllerModel.swift in Sources */,
-				0B8378E72452E9C400031F8C /* UIColor+Extensions.swift in Sources */,
 				0B68977A2451A22900427B6C /* ContentModel.swift in Sources */,
 				0B68977F2451AE5D00427B6C /* Constants.swift in Sources */,
 				0B68974624515A8100427B6C /* AppDelegate.swift in Sources */,

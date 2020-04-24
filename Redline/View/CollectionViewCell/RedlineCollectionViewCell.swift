@@ -16,15 +16,15 @@ class RedlineCollectionViewCell: UICollectionViewCell {
     var contentModel:ContentModel? {
         didSet {
             guard let contentModel = contentModel else {return}
+            // set the content title
             self.contentTitle.text = contentModel.title
+            // set the content image
             if let imageName = contentModel.image {
                 if let image = UIImage(named: imageName) {
                     self.contentImage.image = image
                 }else {
                     self.contentImage.image = UIImage(named: Constants.placeholderImage)
                 }
-            }else {
-                self.contentImage.image = UIImage(named: Constants.placeholderImage)
             }
         }
     }

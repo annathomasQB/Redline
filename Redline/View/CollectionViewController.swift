@@ -40,7 +40,16 @@ class CollectionViewController: UICollectionViewController {
     
     /// Function to customize the appearance of the navigation bar
     func customizeNavigationBar() {
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: Constants.navBarImage), for: .default)
+        // set background image for navigation bar
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: Constants.navBarImage)?.resizableImage(withCapInsets: UIEdgeInsets(top: 0, left: 0, bottom: 0 ,right: 0), resizingMode: .stretch), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        // set image for left bar button item
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: Constants.backButtonImage), style:.plain, target: nil, action: nil)
+        // set image for right bar button item
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: Constants.searchButtonImage), style:.plain, target: nil, action: nil)
+        // set title text attributes
+        self.navigationController?.navigationBar.titleTextAttributes = [.font: UIFont(name: Constants.regularFont, size: 20)!]
+
     }
 
     /// Function to refresh collectionview data

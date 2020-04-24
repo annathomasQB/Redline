@@ -21,6 +21,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="TQZ-WS-znG">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="V74-Zp-U63">
                         <autoresizingMask key="autoresizingMask"/>
@@ -93,14 +94,16 @@
                             <outlet property="prefetchDataSource" destination="cGV-RD-wdO" id="MND-AX-d2z"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="1Dc-6u-PGL"/>
+                    <navigationItem key="navigationItem" id="1Dc-6u-PGL">
+                        <nil key="title"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="redLineCollectionView" destination="uEL-56-lqm" id="bmU-gu-f3q"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mAX-y2-AHQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="359" y="40"/>
+            <point key="canvasLocation" x="357.97101449275362" y="39.508928571428569"/>
         </scene>
     </scenes>
     <resources>
